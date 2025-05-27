@@ -1,0 +1,64 @@
+import React from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { SiBinance } from 'react-icons/si';
+
+export default function Afrimundo() {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-yellow-100 to-red-100 p-6">
+      <h1 className="text-4xl font-bold mb-6 text-center">Afrimundo</h1>
+
+      {/* Store Section */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4">Our Store</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Card>
+            <CardContent>
+              <img src="/clothes.jpg" alt="African Clothes" className="rounded-lg mb-2" />
+              <p className="font-bold">African Clothes</p>
+              <Button className="w-full mt-2">Shop Now</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <img src="/books.jpg" alt="African Books" className="rounded-lg mb-2" />
+              <p className="font-bold">African Books</p>
+              <Button className="w-full mt-2">Shop Now</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4">Videos</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <iframe className="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowFullScreen></iframe>
+        </div>
+      </section>
+
+      {/* Payment Section */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4">Payment</h2>
+        <div className="flex items-center space-x-4">
+          <SiBinance size={32} />
+          <p>Pay us with Binance Wallet: <strong>YOUR_BINANCE_WALLET_ADDRESS</strong></p>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+        <div className="flex space-x-6">
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp size={32} />
+          </a>
+          <a href="https://instagram.com/africulturstore" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={32} />
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
